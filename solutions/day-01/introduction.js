@@ -1,0 +1,1 @@
+console.log('EXTERNAL: Welcome to 30DaysOfJavaScript');
