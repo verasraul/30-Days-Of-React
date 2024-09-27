@@ -1,6 +1,5 @@
 // Variables
-let firstName = 'James';
-const PI = 3.14;
+let first = 'James';
 
 // DATA TYPES
 // Primitive data types in JavaScript include:
@@ -86,13 +85,12 @@ const PI = 3.14;
 let age = 35;
 const gravity = 9.81 ; // we use const for non-changing values, gravitational constant in  m/s2
 let mass = 72; // mass in Kilogram
-const PI = 3.14; // pi a geometrical constant
 
 // More Examples
 const boilingPoint = 100; // temperature in oC, boiling point of water which is a constant
 const bodyTemp = 37; // oC average human body temperature, which is a constant
 
-console.log(age, gravity, mass, PI, boilingPoint, bodyTemp);
+console.log(age, gravity, mass, boilingPoint, bodyTemp);
 
 
 // Math Object:
@@ -156,8 +154,6 @@ Math.cos(60)
 
 // Random Number Generator:
 // The JavaScript Math Object has a random() method number generator which generates number from 0 to 0.999999999
-let randomNum = Math.random() // generates 0 to 0.999
-
 // Generate a random number between 0 and 10
 let randomNum = Math.random()         // generates 0 to 0.999
 let numBtnZeroAndTen = randomNum * 11
@@ -166,6 +162,87 @@ console.log(numBtnZeroAndTen)         // this gives: min 0 and max 10.99
 
 let randomNumRoundToFloor = Math.floor(numBtnZeroAndTen)
 console.log(randomNumRoundToFloor)    // this gives between 0 and 10
+
+// STRINGS:
+// Strings are texts, which are under single, double, back-tick quote. 
+// To declare a string, we need a variable name, assignment operator, a value under a single quote, double quote, or backtick quote.
+let space = ' '; // an empty space string
+let firstName = 'James';
+let lastName = 'Bond';
+let country = 'United States';
+let city = 'NYC';
+let language = 'JavaScript';
+let job = 'teacher';
+let quote = "The saying,'Seeing is Believing' is not correct in 2020.";
+let quotWithBackTick = `The saying,'Seeing is Believing' is not correct in 2020.`;
+
+// String Concatenation
+// Connecting two or more strings together is called concatenation.
+// Concatenating Using Addition Operator
+// Concatenating using the addition operator is an old way. 
+// This way of concatenating is tedious and error-prone. 
+// It is good to know how to concatenate this way, strongly suggested to use the ES6 template strings.
+// Declaring different variables of different data types
+let fullName = firstName + space + lastName; // concatenation, merging two string together.
+console.log(fullName);
+let personInfoOne = fullName + '. I am ' + age + '. I live in ' + country; // ES5 string addition
+console.log(personInfoOne);
+
+// Long Literal Strings
+// A string could be a single character or paragraph or a page. 
+// If the string length is too big it does not fit in one line. 
+// We can use the backslash character (\) at the end of each line to indicate that the string will continue on the next line. 
+const paragraph = "My name is Asabeneh Yetayeh. I live in Finland, Helsinki.\
+I am a teacher and I love teaching. I teach HTML, CSS, JavaScript, React, Redux, \
+Node.js, Python, Data Analysis and D3.js for anyone who is interested to learn. \
+In the end of 2019, I was thinking to expand my teaching and to reach \
+to global audience and I started a Python challenge from November 20 - December 19.\
+It was one of the most rewarding and inspiring experience.\
+Now, we are in 2020. I am enjoying preparing the 30DaysOfJavaScript challenge and \
+I hope you are enjoying too.";
+console.log(paragraph);
+
+// Escape Sequences in Strings
+// In JavaScript and other programming languages \ followed by some characters is an escape sequence. 
+// Most common escape characters:
+// - \n: new line
+// - \t: Tab, means 8 spaces
+// - \\: Back slash
+// - \': Single quote (')
+// - \": Double quote (")
+console.log('I hope everyone is enjoying the 30 Days Of JavaScript challenge.\nDo you ?'); // line break
+console.log('Days\tTopics\tExercises');
+console.log('Day 1\t3\t5');
+console.log('Day 2\t3\t5');
+console.log('Day 3\t3\t5');
+console.log('Day 4\t3\t5');
+console.log('This is a backslash  symbol (\\)'); // To write a backslash
+console.log('In every programming language it starts with \"Hello, World!\"');
+console.log("In every programming language it starts with \'Hello, World!\'");
+console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020');
+
+// Template Literals (Template Strings)
+// To create a template strings, we use two back-ticks. 
+// We can inject data as expressions inside a template string. 
+// To inject data, we enclose the expression with a curly bracket({}) preceded by a $ sign.
+//Syntax
+// `String literal text`
+// `String literal text ${expression}`
+console.log(`The sum of 2 and 3 is 5`); // statically writing the data
+let a = 2;
+let b = 3;
+console.log(`The sum of ${a} and ${b} is ${a + b}`); // injecting the data dynamically
+
+let personInfoTwo = `I am ${fullName}. I am ${age}. I live in ${country}.`; //ES6 - String interpolation method
+let personInfoThree = `I am ${fullName}. I live in ${city}, ${country}. I am a ${job}. I teach ${language}.`;
+console.log(personInfoTwo);
+console.log(personInfoThree);
+
+// Using a string template or string interpolation method, 
+// we can add expressions, which could be a value, or some operations (comparison, arithmetic operations, ternary operation).
+console.log(`${a} is greater than ${b}: ${a > b}`)
+
+
 
 
 
@@ -183,7 +260,7 @@ const arr3 = [];
 console.log(arr3);
 
 // Array with values
-const numbers = [0, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]; // number array
+const numbersArray = [0, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]; // number array
 const armor = ['Knife', 'Nunchucks', 'Brass Knuckles','Shotgun', 'AK-47', 'Glock 9', 'Beretta', 'Uzi', 'MAC-10']; // armor array
 const characters = ['James Bond', 'Max Payne', 'Stone Cold', 'The Rock', 'Ash', 'Goku', 'Vegetta', 'Ryu', 'Bison']; // characters array
 const attacks = ['Punch', 'Kick', 'Push', 'Slice', 'Stab', 'Shoot']
